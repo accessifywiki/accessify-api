@@ -1,0 +1,9 @@
+{
+  "name": "accessifywiki-api-validate-app-yaml",
+  "description": "...",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "yaml": "0.3.0"
+  },
+  "private": true
+}
