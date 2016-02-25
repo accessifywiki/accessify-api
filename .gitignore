@@ -12,7 +12,6 @@ vendor/*
 test/node_modules/*
 
 *BAK*
-.DS_Store
 
 
 #End.

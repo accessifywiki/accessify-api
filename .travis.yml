@@ -14,6 +14,9 @@ install:
   - composer install
   - composer install-npm
 
+before_script:
+  - cp app.TEMPLATE.yaml app.yaml
+
 script:
   - composer test
 

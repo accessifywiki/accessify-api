@@ -19,6 +19,5 @@ try {
 }
 
 fprintf(STDERR, "OK. YAML file parsed: '%s' - %s\n", $e->getMessage(), $yaml_file);
-exit(0);
 
 #End.

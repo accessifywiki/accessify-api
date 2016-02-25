@@ -25,7 +25,7 @@ class DotEnvMiddleware
      *
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function __invoke($request, $response, $next)
+    public function __invoke(Request $request, Response $response, $next)
     {
         try {
             if (self::envIsTrue('aw_use_dotenv')) {
@@ -35,7 +35,7 @@ class DotEnvMiddleware
             } else {
                 $this->testGoogeAppEngineVariables();
             }
-        } catch (Exception $ex) {
+        } catch (\Exception $ex) {
             header('HTTP/1.1 500');
             header('X-AW-Debug-00', 'dotenv = fail' . $ex->getMessage());
             echo 'Dotenv error! '. $ex->getMessage();

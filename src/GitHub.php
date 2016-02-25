@@ -8,7 +8,6 @@ namespace AccessifyWiki\Api;
  */
 
 use \GuzzleHttp\Client;
-use \Symfony\Component\Yaml\Yaml;
 
 class GitHub
 {

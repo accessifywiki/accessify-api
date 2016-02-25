@@ -48,12 +48,11 @@ class App extends \Slim\App
     }
 
 
-    public function jsonOLD($obj, $response = null)  //OLD.
+    public function jsonOLD($obj, Response $response = null)  //OLD.
     {
         $response = $response ? $response : $this->response;  //???
 
-        $callback = $this->getParam('callback');
-        $callback = preg_match('/^[a-z_][\w\._]+$/', $callback) ? $callback : null;
+        $callback = $this->getValidCallback();
 
         $response = $response->withHeader('Access-Control-Allow-Origin', '*');
         $response = $response->withHeader('Content-Type', 'application/json; charset=utf-8');
@@ -77,7 +76,7 @@ class App extends \Slim\App
         return $callback && preg_match(self::CALLBACK_REGEX, $callback) ? $callback : null;
     }
 
-    public function getRequiredUrl(&$response)
+    public function getRequiredUrl(Response &$response)
     {
         $url = $this->getParam('url', FILTER_VALIDATE_URL);
         if (! $url) {

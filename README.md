@@ -1,4 +1,6 @@
 
+[![Build status – Travis-CI][travis-icon]][travis]
+
 # AccessifyWiki-API
 
 Portable/ Google App Engine hosted PHP-based API for AccessifyWiki accessibility fixes.
@@ -39,6 +41,9 @@ composer deploy
 [@nfreear/accessify-wiki]: https://github.com/nfreear/accessify-wiki "Legacy Python/webapp2-based service"
 [@nfreear/wp-accessify]: https://github.com/nfreear/wp-accessify "WordPress plugin"
 [@nfreear/accessify-client-php]: https://github.com/nfreear/accessify-client-php "PHP client library"
+
+[travis]: https://travis-ci.org/accessifywiki/accessifywiki-api
+[travis-icon]: https://travis-ci.org/accessifywiki/accessifywiki-api.svg "Build status – Travis-CI"
 
 
 [End]: //end.
